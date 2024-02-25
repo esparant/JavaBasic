@@ -5,7 +5,7 @@ public class StudentEx2 {
         Student student1 = new Student();
         // Student 라는 클래스가 두개 있을 경우 옆에 있는 경로를 봐서 고를 것.
         initStudent(student1, "김철수", 20, 18); // 1번째 방법
-
+        System.out.println("student1참조값 = " + student1);
         Student student2;
         initStudent(student2 = new Student(), "이유리", 19, 80);
 
@@ -18,6 +18,7 @@ public class StudentEx2 {
     // WOOOOOOOOOOOOOOOOOOOOW
     static Student createStudent(String name, int age, int grade) {
         Student student = new Student();
+        System.out.println("student참조값 = " + student);
         student.name = name;
         student.age = age;
         student.grade = grade;
