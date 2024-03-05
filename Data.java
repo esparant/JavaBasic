@@ -1,5 +1,7 @@
-package class1.ref;
+package pack;
 
 public class Data {
-    int value;
+    public Data() {
+        System.out.println("패키지 pack Data 생성");
+    }
 }
