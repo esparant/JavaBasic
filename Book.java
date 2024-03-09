@@ -1,27 +1,19 @@
-package class1.ex;
+package extends1.ex.item;
 
-public class Book {
-    String title;
-    String author;
-    int page;
+public class Book extends Item {
+    private String author;
+    private String isbn;
 
-
-    Book() {
-        this("","",0);
-    }
-    Book(String title, String author, int page) {
-        this.title = title;
+    public Book(String name, int price, String author, String isbn) {
+        super(name, price);
         this.author = author;
-        this.page = page;
+        this.isbn = isbn;
     }
 
-    Book(String title, String author) {
-        this(title, author, 0);
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("- 저자: " + author + ", isbn: " + isbn);
     }
-
-    void displayInfo() {
-        System.out.printf("도서 제목: %s, 도서 저자: %s,페이지 수: %d\n", title, author, page);
-    }
-
 
 }
